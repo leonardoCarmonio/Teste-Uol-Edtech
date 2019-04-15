@@ -34,7 +34,7 @@ namespace TesteUolEdtech.Services.API
             {
                 options.OutputFormatters.Remove(new XmlDataContractSerializerOutputFormatter());
             })
-            .SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             // AutoMapper
             services.AddAutoMapperSetup();

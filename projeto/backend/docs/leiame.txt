@@ -1,6 +1,8 @@
 - Backend:
-  - Foi construído usando .NET Core juntamente com Entity Framework Core e Dapper
-  - Está localizado dentro da pasta TesteUolEdtech/projeto/backend/src
+  - Foi construído usando .NET Core 2.1 juntamente com Entity Framework Core e Dapper
+  - É necessário ter instalado na máquina o sdk do .net core 2.1 
+	disponível para download no link https://dotnet.microsoft.com/download/dotnet-core/2.1
+  - O projeto está localizado dentro da pasta TesteUolEdtech/projeto/backend/src
   - Coloque para iniciar no projeto TesteUolEdtech.Services.API que está dentro da pasta lógica do Visual Studio chamada "1 - Service"
   - Está configurado para abrir na url http://localhost:54725 configurado 
     no arquivo TesteUolEdtech\projeto\backend\src\TesteUolEdtech.Services.API\Properties\launchSettings.json
@@ -12,6 +14,7 @@
   - Está localizado dentro da pasta TesteUolEdtech/projeto/web
   - Para execução: 
      - Abra o prompt de comando ou terminal na pasta TesteUolEdtech/projeto/web 
-     - Execute o comando ng serve --open
+     - Execute o comando npm i para instalar as dependências do projeto
+     - Execute o comando ng serve --open para iniciar o frontend
      - A aplicação pode ser acessada pela url http://localhost:4200    
   - A configuração da url para acesso ao backend se encontra no arquivo TesteUolEdtech\projeto\web\src\environments\environment.ts 
