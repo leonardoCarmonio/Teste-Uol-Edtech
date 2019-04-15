@@ -1,0 +1,50 @@
+<div class="card mt-4 mb-4">    
+    <div class="card-header">
+        <h5>Teste Uol Edtech: Leonardo de Jesus Carmonio</h5>
+    </div>
+    <div class="card-body">
+      <div class="col-md-12">
+          <b>Recurso 1 (Listagem)</b>
+          <p>
+            A listagem deve exibir em tela todos os cursos, turmas e alunos 
+            cadastrados no banco de dados (57 alunos). Todos os alunos possuem uma 
+            turma e toda turma possui um curso. A listagem deve exibir o nome do curso como primeiro nível hierárquico,
+             o nome da turma como segundo nível hierárquico e os nomes dos alunos da turma em terceiro nível. 
+          </p>
+      </div>
+      <div class="col-md-12">
+          <b>Recurso 2 (Migração)</b>
+          <p>
+            O recurso de migração deve ter um local para selecionar o período 
+            acadêmico de origem e o período acadêmico de destino. Algumas regras 
+            devem ser respeitadas para a execução correta:
+            <br><br>
+            1.	Alunos que são de turmas com período acadêmico impar devem ser movidos somente para 
+            turmas com período acadêmico impar e turmas com período acadêmico par devem ser 
+            movidos somente para turmas de períodos acadêmicos pares. 
+            <br><br>
+            Ex.: Turma com período acadêmico 2019.1 devem ser movidos para turma de período 
+            acadêmico 2019.3 e 2019.3 para 2020.1 
+            Turma com período acadêmico 2019.2 devem ser movidos para 
+            turma de período acadêmico 2019.4 e 2019.4 para 2020.2
+            <br><br>
+            2.	Deverá ser criado um campo na tabela Student_Class para guardar o status ‘M’ 
+            quando um aluno for migrado e outro campo ‘ClassId_Origin’ que deverá ser preenchido no registro que será criado como resultado da migração onde deve ser informado o ID da turma de origem.
+            <br><br>
+            Ex.: O aluno 1 está na turma 1 e vai ser migrado para a turma 3
+            Será criado um novo registro na tabela Student_Class com o id do aluno e o 
+            id da nova turma e o campo (que deve ser criado na estrutura da tabela) 
+            “ClassId_Origin” deve ser preenchido com o Id da turma de origem, neste caso 
+            como ele veio da turma 1 o campo “ClassId_Origin” deve receber o valor 1.
+            Já o registro da tabela Student_Class que foi utilizado como base para a 
+            migração deverá receber o valor ‘M’ no campo Status (que deve ser criado na estrutura da tabela)
+            <br><br>
+            3.	O sistema não deve permitir migrar alunos de um período acadêmico impar
+            para um período acadêmico par ou vice-versa.
+            <br><br>
+            4.	O aluno que já foi migrado não pode ser migrado novamente.
+        </p>
+          
+      </div>
+    </div>
+  </div>

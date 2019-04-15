@@ -1,0 +1,57 @@
+<div class="card mt-3 mb-3">
+  <div class="card-header">
+    <div class="float-left">
+      <h3>Migração de Turma</h3>
+    </div>
+  </div>
+  <div class="card-body">
+    <form [formGroup]="formulario">
+      <div class="form-row">
+
+        <div class="form-group col-md-6">
+          <label for="" class="control-label">Origem:</label>
+          <select class="form-control" placeholder="Selecione um período acadêmico" formControlName="periodoAcademicoOrigem">
+            <option [ngValue]="null">Selecione um período acadêmico</option>
+            <option *ngFor="let periodoAcademico of periodosAcademicos" [ngValue]="periodoAcademico"> {{ periodoAcademico.descricao }} </option>
+          </select>
+        </div>
+
+        <div class="form-group col-md-6">
+            <label for="" class="control-label">Destino:</label>
+            <select class="form-control" placeholder="Selecione um período acadêmico" formControlName="periodoAcademicoDestino">
+              <option [ngValue]="null">Selecione um período acadêmico</option>
+              <option *ngFor="let periodoAcademico of periodosAcademicosDestino" [ngValue]="periodoAcademico"> {{ periodoAcademico.descricao }} </option>
+            </select>
+        </div>
+
+        <div class="form-group col-md-12">
+            <ul class="curso-lista">
+                <li *ngFor="let curso of cursos" >
+                    <div class="texto-curso"> {{ curso.descricao }} </div>
+                    <ul class="turma-lista">
+                      <li *ngFor="let turma of curso.turmas" >
+                          <div class="texto-turma"> {{ turma.descricao }}</div>
+                          <ul class="aluno-lista">
+                            <li *ngFor="let aluno of turma.alunos" >
+                              <div class="texto-aluno"> 
+                                <label class="cursor-pointer">
+                                  <input type="checkbox"  (change)="aluno.selecionado = $event.target.checked" /> {{ aluno.nome }} 
+                                </label>
+                              </div>
+                            </li>
+                          </ul>
+                      </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+      </div>
+
+      <div style="margin-top: 10px;" class="text-right">
+          <button type="submit" class="btn btn-primary" (click)="enviar()" >Migrar Alunos</button>
+      </div>
+
+    </form>
+  </div>
+</div>

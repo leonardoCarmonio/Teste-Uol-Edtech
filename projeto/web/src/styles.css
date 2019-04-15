@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+.curso-lista, .turma-lista, .aluno-lista {
+    list-style-type: none;
+}
+
+.curso-lista li .texto-curso {
+    background-color: #f3f2f2;
+    padding: 4px 8px;
+}
+
+.turma-lista li .texto-turma {
+    color: #2d2b2b;
+    font-weight: 600;
+}
+
+.aluno-lista li .texto-aluno {
+    font-size: 14px;
+    text-transform: lowercase;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}

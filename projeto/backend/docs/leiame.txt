@@ -1,0 +1,17 @@
+- Backend:
+  - Foi construído usando .NET Core juntamente com Entity Framework Core e Dapper
+  - Está localizado dentro da pasta TesteUolEdtech/projeto/backend/src
+  - Coloque para iniciar no projeto TesteUolEdtech.Services.API que está dentro da pasta lógica do Visual Studio chamada "1 - Service"
+  - Está configurado para abrir na url http://localhost:54725 configurado 
+    no arquivo TesteUolEdtech\projeto\backend\src\TesteUolEdtech.Services.API\Properties\launchSettings.json
+  - A string de conexão da base de dados está no arquivo TesteUolEdtech\projeto\backend\src\TesteUolEdtech.Services.API\appsettings.json
+  - O sql com a alteração da estrutura do banco de dados está na pasta TesteUolEdtech/projeto/backend/sql
+
+- Frontend:
+  - Foi construído com o framework Angular e a biblioteca ngx-bootstrap
+  - Está localizado dentro da pasta TesteUolEdtech/projeto/web
+  - Para execução: 
+     - Abra o prompt de comando ou terminal na pasta TesteUolEdtech/projeto/web 
+     - Execute o comando ng serve --open
+     - A aplicação pode ser acessada pela url http://localhost:4200    
+  - A configuração da url para acesso ao backend se encontra no arquivo TesteUolEdtech\projeto\web\src\environments\environment.ts 

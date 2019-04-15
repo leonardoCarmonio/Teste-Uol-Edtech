@@ -1,0 +1,24 @@
+<div class="card mt-3 mb-3">
+  <div class="card-header">
+    <div class="float-left">
+      <h3>Listagem de Cursos</h3>
+    </div>
+  </div>
+  <div class="card-body">
+    <ul class="curso-lista">
+      <li *ngFor="let curso of cursos$ | async" >
+          <div class="texto-curso"> {{ curso.descricao }} </div>
+          <ul class="turma-lista">
+            <li *ngFor="let turma of curso.turmas" >
+                <div class="texto-turma"> {{ turma.descricao }}</div>
+                <ul class="aluno-lista">
+                  <li *ngFor="let aluno of turma.alunos" >
+                      <div class="texto-aluno"> {{ aluno.nome }} </div>
+                  </li>
+                </ul>
+            </li>
+          </ul>
+      </li>
+    </ul>
+  </div>
+</div>
